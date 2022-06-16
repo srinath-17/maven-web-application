@@ -20,10 +20,10 @@ agent any
     //stage('upload artifact'){
       //  sh "mvn deploy"
     //}
-    /*stage('deploy into tomcat'){
+    stage('deploy into tomcat'){
         steps{
         sshagent(['5f1f10f2-6b53-48da-ab65-db151d1a97f1']) {
            sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@172.31.30.25:/opt/apache-tomcat-9.0.63/webapps"}}
-     }*/
+     }
   }
 } 
