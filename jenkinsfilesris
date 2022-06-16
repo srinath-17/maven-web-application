@@ -3,11 +3,11 @@ agent any
     def mavenHome = tool name:'maven1'
     stages{
      stage('check out'){
-      step{
+      steps{
         git branch: 'development', credentialsId: '19bc0199-fb2b-4fc8-acfb-baae80ec81bc', url: 'https://github.com/srinath-17/maven-web-application.git'}
     }
      stage('Build'){
-     step{
+     steps{
        sh "${mavenHome}/bin/mvn clean package"}
        }
     
@@ -19,8 +19,9 @@ agent any
       //  sh "${mavenHome}/bin/mvn deploy"
     //}
     stage('deploy into tomcat'){
+        steps{
         sshagent(['5f1f10f2-6b53-48da-ab65-db151d1a97f1']) {
-           sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@172.31.30.25:/opt/apache-tomcat-9.0.63/webapps"}
+           sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@172.31.30.25:/opt/apache-tomcat-9.0.63/webapps"}}
      }
  }
 }
