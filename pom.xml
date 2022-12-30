@@ -99,7 +99,7 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>mavenwebapplication</name>
-	      <url>http://54.226.42.63:8081/repository/walmart-release/</url>
+	      <url>http://34.81.97.11:8081/repository/mavenwebapplication/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
