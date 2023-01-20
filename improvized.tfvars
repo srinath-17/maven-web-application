@@ -1,2 +1,2 @@
-aws_access_key="AKIA6HIJHQKK3BLFZILT"
-aws_secret_key="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"
+aws_access_key=""
+aws_secret_key=""
