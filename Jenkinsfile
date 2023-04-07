@@ -92,6 +92,3 @@ stages{
  }
  
 }*/
-
-
-}//Pipeline closing
