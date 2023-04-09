@@ -31,7 +31,9 @@ pipeline{
         }
      }
      stage("Build The Downstream Job"){
+	 steps{
 	     build job: "manasa_prod"
+	 }
      }
   }
   post {
