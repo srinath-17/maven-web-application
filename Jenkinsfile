@@ -30,6 +30,9 @@ pipeline{
           sh  "mvn clean package"
         }
      }
+     stage("Build The Downstream Job"){
+	     build job: "manasa_prod"
+     }
   }
   post {
         always {
