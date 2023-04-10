@@ -35,7 +35,7 @@ pipeline{
      }
     stage("Build sample project Job"){
 	    steps{
-		   build job: 'sris_game_testing_proj_dev'
+		   build job: 'sris_game_testing_proj_pipe_dev'
 	    }
     }
   }
