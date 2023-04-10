@@ -33,11 +33,11 @@ pipeline{
           sh  "mvn clean package"
         }
      }
-    /*stage("Build sample project Job"){
+    stage("Build sample project Job"){
 	    steps{
-		   build job: 'sampleproject_dev'
+		   build job: 'sris_game_testing_proj_dev'
 	    }
-    }*/
+    }
   }
   post {
         always {
