@@ -1,0 +1,21 @@
+apiVersion: build.openshift.io/v1
+kind: BuildConfig
+metadata:
+  name: mavenweb
+spec:
+  source:
+    git:
+      uri: https://github.com/srinath-17/maven-web-application.git
+  strategy:
+    type: Source
+    sourceStrategy:
+      from:
+        kind: DockerImage
+        name: maven:3.8.4-openjdk-11
+      env:
+        - name: MAVEN_MIRROR_URL
+          value: http://my-maven-mirror.com/repository
+  output:
+    to:
+      kind: ImageStreamTag
+      name: mavenweb:latest
